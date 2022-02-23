@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lists</title>
+</head>
+<body>
+<span>WORD - SCORE - Date&time</span>
+<ul>
+
+	{% for s in scores %}
+	<li>{{s.input_str}} - 	{{s.sum_score}} - {{s.created_at}}</li> 
+{% endfor %}
+</ul>
+</body>
+</html>

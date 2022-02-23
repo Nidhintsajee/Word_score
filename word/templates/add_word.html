@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>home</title>
+</head>
+<body>
+<!-- <p>Hiii</p> -->
+
+<a href="{% url 'list_scores' %}">list scores</a>
+<form method="post" action="{% url 'add_word' %}">
+	{% csrf_token %}
+	<label>Enter the word</label>
+	<input type="text" name="word">
+	<input type="submit" name="submit">
+
+</form>
+{% if sum_score %}
+<label>Your Score : </label>
+{{sum_score}}
+{% endif %}
+</body>
+</html>
